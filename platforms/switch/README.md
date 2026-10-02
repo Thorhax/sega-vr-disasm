@@ -76,6 +76,13 @@ Standalone native Nintendo Switch homebrew port of **Virtua Racing Deluxe (Sega 
    *(Also accepts `rom.bin` or `Virtua Racing Deluxe (USA).32x` directly in `sdmc:/switch/virtuaracing32x/` or `sdmc:/switch/virtuaracing32x/Game/`)*
 4. Launch the Homebrew Menu on your Switch (via Title Override for full RAM access) and select **Virtua Racing Deluxe**.
 
+### 🔍 Verified ROM Checksums
+
+| ROM Version | File Name | Size | SHA-1 | MD5 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Retail Cartridge Dump (USA)** | `Virtua Racing Deluxe (USA).32x` | 3,145,728 bytes | `18dfdeb50780c2623e60a6587d7ed701a1cf81f1` | `72b1ad0f949f68da7d0a6339ecd51a3f` |
+| **Disassembly Rebuild (Optimized)** | `vr_rebuild.32x` | 4,194,304 bytes | `7a46af8e6c93dd029075a373fda14fc2ac073587` | `3dcd627bcf1c85d8579707d2d1f5367d` |
+
 ---
 
 ## 🛠️ Building from Source
