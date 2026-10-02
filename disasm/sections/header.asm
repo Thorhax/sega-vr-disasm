@@ -204,7 +204,7 @@
         dc.w    $3630        ; $000188
         dc.w    $312D        ; $00018A
         dc.w    $3030        ; $00018C
-        dc.w    $1E4D        ; $00018E
+        dc.w    $0000        ; $00018E (0000 = bypass checksum verification)
         dc.w    $4A36        ; $000190
         dc.w    $2020        ; $000192
         dc.w    $2020        ; $000194

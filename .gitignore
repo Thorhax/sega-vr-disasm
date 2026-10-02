@@ -108,3 +108,8 @@ analysis/agent-scratch/
 
 # Blog posts
 BLOG_*.md
+
+# Switch port build artifacts and logs
+platforms/switch/build_switch/
+vr-error-logs/
+dist/
