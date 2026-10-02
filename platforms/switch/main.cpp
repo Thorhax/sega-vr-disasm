@@ -29,6 +29,7 @@ extern "C" void userAppInit(void)
     romfsInit();
     mkdir("sdmc:/switch", 0777);
     mkdir("sdmc:/switch/virtuaracing32x", 0777);
+    mkdir("sdmc:/switch/virtuaracing32x/Game", 0777);
     mkdir("sdmc:/switch/virtuaracing32x/save", 0777);
     chdir("sdmc:/switch/virtuaracing32x");
 
@@ -182,11 +183,20 @@ std::string find_rom_file()
     const std::vector<std::string> candidates = {
         "sdmc:/switch/virtuaracing32x/vr_rebuild.32x",
         "sdmc:/switch/virtuaracing32x/rom.bin",
+        "sdmc:/switch/virtuaracing32x/virtua_racing.32x",
         "sdmc:/switch/virtuaracing32x/Virtua Racing Deluxe (USA).32x",
-        "romfs:/rom.bin",
-        "romfs:/vr_rebuild.32x",
-        "romfs:/rom/rom.bin",
+        "sdmc:/switch/virtuaracing32x/Virtua Racing Deluxe (Europe).32x",
+        "sdmc:/switch/virtuaracing32x/Virtua Racing Deluxe (Japan).32x",
+        "sdmc:/switch/virtuaracing32x/Virtua Racing Deluxe.32x",
+        "sdmc:/switch/virtuaracing32x/Game/vr_rebuild.32x",
+        "sdmc:/switch/virtuaracing32x/Game/rom.bin",
+        "sdmc:/switch/virtuaracing32x/Game/virtua_racing.32x",
+        "sdmc:/switch/virtuaracing32x/Game/Virtua Racing Deluxe (USA).32x",
+        "sdmc:/switch/vr_rebuild.32x",
+        "sdmc:/switch/rom.bin",
+        "sdmc:/switch/virtua_racing.32x",
         "vr_rebuild.32x",
+        "rom.bin",
         "build/vr_rebuild.32x"
     };
 
@@ -596,7 +606,7 @@ int main(int argc, char** argv)
         SDL_ShowSimpleMessageBox(
             SDL_MESSAGEBOX_ERROR,
             "Virtua Racing Deluxe",
-            "ROM file not found!\nPlease place vr_rebuild.32x inside sdmc:/switch/virtuaracing32x/",
+            "ROM file not found!\n\nPlease place your Virtua Racing Deluxe (32X) ROM inside:\nsdmc:/switch/virtuaracing32x/vr_rebuild.32x\n(or rom.bin)",
             window
         );
         SDL_DestroyTexture(texture);

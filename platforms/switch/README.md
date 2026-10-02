@@ -36,9 +36,9 @@ Standalone native Nintendo Switch homebrew port of **Virtua Racing Deluxe (Sega 
   - High scores, lap records, and championship rankings automatically save to `sdmc:/switch/virtuaracing32x/save/vrd.srm`.
 - **2-Player Split Screen Multiplayer**:
   - Full support for two connected Joy-Cons or Nintendo Switch Pro Controllers for head-to-head racing.
-- **Standalone Plug-and-Play**:
-  - The optimized 4MB cartridge ROM is packaged directly inside the `.nro` RomFS.
-  - Custom ROM overrides supported via `sdmc:/switch/virtuaracing32x/vr_rebuild.32x`.
+- **Clean Legal Homebrew**:
+  - The `.nro` binary contains **zero** copyrighted assets or ROM data.
+  - Users provide their own legal copy of Virtua Racing Deluxe (`vr_rebuild.32x` or `rom.bin`) on their SD card.
 
 ---
 
@@ -65,18 +65,16 @@ Standalone native Nintendo Switch homebrew port of **Virtua Racing Deluxe (Sega 
 
 ---
 
-## 📦 Installation
+## 📦 Installation & ROM Setup
 
-1. Download `VirtuaRacingDeluxe.nro` from the [Latest Release](https://github.com/Thorhax/sega-vr-disasm/releases).
-2. Copy `VirtuaRacingDeluxe.nro` to your Nintendo Switch SD card:
+1. Download `VirtuaRacingDeluxe.nro` (or extract `VirtuaRacingDeluxe-v1.0.0-switch.zip`).
+2. Copy `VirtuaRacingDeluxe.nro` to `sdmc:/switch/` or `sdmc:/switch/virtuaracing32x/` on your SD card.
+3. Place your Virtua Racing Deluxe (Sega 32X) ROM file (`vr_rebuild.32x` or `rom.bin`) inside:
    ```
-   sdmc:/switch/VirtuaRacingDeluxe.nro
+   sdmc:/switch/virtuaracing32x/vr_rebuild.32x
    ```
-   or:
-   ```
-   sdmc:/switch/virtuaracing32x/VirtuaRacingDeluxe.nro
-   ```
-3. Launch the Homebrew Menu on your Switch (via Title Override for full RAM access) and select **Virtua Racing Deluxe**.
+   *(Also accepts `rom.bin` or `Virtua Racing Deluxe (USA).32x` directly in `sdmc:/switch/virtuaracing32x/` or `sdmc:/switch/virtuaracing32x/Game/`)*
+4. Launch the Homebrew Menu on your Switch (via Title Override for full RAM access) and select **Virtua Racing Deluxe**.
 
 ---
 

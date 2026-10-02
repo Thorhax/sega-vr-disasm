@@ -82,16 +82,6 @@ target_link_libraries(VirtuaRacingDeluxe PRIVATE
     -lfreetype -lharfbuzz -lbz2 -lpng -lz -lnx -lm
 )
 
-# RomFS Directory Setup
-set(VR_ROMFS_DIR "${CMAKE_CURRENT_BINARY_DIR}/romfs")
-file(MAKE_DIRECTORY "${VR_ROMFS_DIR}")
-
-# Copy assembled ROM to RomFS
-set(ROM_SRC "${CMAKE_CURRENT_SOURCE_DIR}/../../build/vr_rebuild.32x")
-if(EXISTS "${ROM_SRC}")
-    file(COPY_FILE "${ROM_SRC}" "${VR_ROMFS_DIR}/rom.bin" ONLY_IF_DIFFERENT)
-endif()
-
 # NACP Metadata
 nx_generate_nacp(virtuaracing_nacp
     OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/VirtuaRacingDeluxe.nacp"
@@ -100,11 +90,10 @@ nx_generate_nacp(virtuaracing_nacp
     VERSION "${PROJECT_VERSION}"
 )
 
-# NRO Target
+# NRO Target (No embedded ROM - user provides ROM on SD card)
 nx_create_nro(virtuaracing_nro
     TARGET VirtuaRacingDeluxe
     OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/VirtuaRacingDeluxe.nro"
     ICON "${CMAKE_CURRENT_SOURCE_DIR}/icon.png"
     NACP "${CMAKE_CURRENT_BINARY_DIR}/VirtuaRacingDeluxe.nacp"
-    ROMFS "${VR_ROMFS_DIR}"
 )
